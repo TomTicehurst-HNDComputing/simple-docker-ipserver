@@ -5,6 +5,6 @@ RUN apt update && apt install -y curl gettext-base && \
 
 WORKDIR /scripts
 
-COPY index.php.template index.php.template
+COPY index.php index.php
 
-CMD ["sh", "-c", "cat ./index.php.template |tee index.php && php -S 0.0.0.0:8080 -t /scripts"]
+CMD ["sh", "-c", "php -S 0.0.0.0:8080 -t /scripts"]
