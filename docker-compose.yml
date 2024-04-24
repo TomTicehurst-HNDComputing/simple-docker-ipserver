@@ -1,0 +1,9 @@
+name: ipserver
+
+services:
+  ipserver:
+    image: ipserver:latest
+    container_name: ipserver_container
+
+    ports:
+      - 80:8080
